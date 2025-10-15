@@ -27,13 +27,12 @@ app.use('/uploads', express.static('uploads'));
 app.use(cors())
 
 app.use("/user",userRouter)
-app.use("/agent",agentRouter)
-app.use("/traveler",travelerRouter)
 app.get("/" ,(req,res)=>{
   res.send("Welcome to the Travel Market place website")
 })
 
-connectToMongoose("mongodb+srv://test-yt:fbpeRfQjLM2RPPO6@travel.oxp093u.mongodb.net/")
+// connectToMongoose("mongodb+srv://test-yt:fbpeRfQjLM2RPPO6@travel.oxp093u.mongodb.net/")
+connectToMongoose(" mongodb://127.0.0.1:27017/")
 .then(()=>console.log("connection successfully"))
 .catch(err => console.log("error", err))
 
