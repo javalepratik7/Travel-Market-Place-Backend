@@ -7,8 +7,6 @@ const crypto =require("crypto")
 // 3)cors
 
 const userRouter=require("./Routers/UserRoute")
-const agentRouter=require("./Routers/AgentRoute")
-const travelerRouter=require("./Routers/TravelerRouter")
 const {onlyLogin}=require("./Middlewares/middleware")
 const {connectToMongoose}=require("./ConnectionDB")
 const path=require("path")
@@ -32,7 +30,7 @@ app.get("/" ,(req,res)=>{
 })
 
 // connectToMongoose("mongodb+srv://test-yt:fbpeRfQjLM2RPPO6@travel.oxp093u.mongodb.net/")
-connectToMongoose(" mongodb://127.0.0.1:27017/")
+connectToMongoose("mongodb://127.0.0.1:27017/school")
 .then(()=>console.log("connection successfully"))
 .catch(err => console.log("error", err))
 
